@@ -7,7 +7,7 @@ Add kafka client dependency.
 ## Step 1
 Add kafka client dependency into pom.
 
-##Step 2
+## Step 2
 ###Setup producer config
 Majorly we setup 3 configurations, producer IP/IPS, key serializer. value serializer.
 Refer SimpleProducer class.
