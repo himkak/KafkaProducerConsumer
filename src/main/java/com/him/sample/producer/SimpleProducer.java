@@ -9,14 +9,17 @@ import java.util.Properties;
 
 public class SimpleProducer {
 
+    public static final String MY_TOPIC_1 = "my_topic1";
+
     public static void main(String[] args) {
         KafkaProducer<String, String> producer=new KafkaProducer(getProducerConfig()) ;
-        ProducerRecord<String, String> record= new ProducerRecord("my_topic1","Key 1","Hello topic Msg 1");
+        ProducerRecord<String, String> record= new ProducerRecord(MY_TOPIC_1,"Key 1","Hello topic Msg 1");
 
         // async call
         producer.send(record);
         producer.flush();
         producer.close();
+
 
         System.out.println("msg sent");
 
